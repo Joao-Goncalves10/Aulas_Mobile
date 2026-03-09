@@ -5,7 +5,7 @@ export default function Lista00() {
 
     const produtos = [
         { id: 1, nome: "Camiseta", preco: 49.9 },
-        { id: 2, nome: "Calça", preco: 89.9 }
+        { id: 2, nome: "Calça", preco: 89.9 },
         { id: 3, nome: "Tênis", preco: 199.9}
     ];
 
@@ -23,6 +23,23 @@ export default function Lista00() {
                 {fruta}
                 </Text>
             ))}
+      </View>
+
+       <View style={styles.card}>
+        <Text style={styles.label}>Exercício 2 - Lista de Produtos</Text>
+        {produtos.map((produto) => (
+          <Text key={produto.id} style={styles.texto}>
+            {produto.nome} - R${produto.preco.toFixed(2)} </Text>
+        ))}
+      </View>
+
+      <View style={styles.card}>
+        <Text style={styles.label}>Exercício 3 - Filtrar Números Pares</Text>
+        {numerosPares.map((numero) => (
+          <Text key={numero} style={styles.texto}>
+            {numero}
+          </Text>
+        ))}
       </View>
     </ScrollView>
   );
